@@ -1,5 +1,10 @@
 <?php 
 
+ob_start();  // prevents header errors before reading the whole page!
+define('DEBUG', 'TRUE');  // We want to see our errors
+
+include('credentials.php');
+
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 $nav['index.php'] = 'Home';
 $nav['about.php'] = 'About';
@@ -84,4 +89,19 @@ function random_pics($photo_array) {
     $i = rand(0, 4);
     $rand_photo = ''.$photo_array[$i].'.jpg';
     echo '<img src = "photos/'.$rand_photo.'" alt = "'.$photo_array[$i].'">';
+}
+
+function myError($myFile, $myLine, $errorMsg)
+{
+if(defined('DEBUG') && DEBUG)
+{
+ echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
+      echo 'Error message: <b> '.$errorMsg.'</b>';
+      die();
+  }  else {
+      echo ' Houston, we have a problem!';
+      die();
+  }
+    
+    
 }
