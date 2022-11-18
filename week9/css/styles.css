@@ -4,14 +4,16 @@
     padding:0;
     margin:0;
     box-sizing:border-box;
+    font-family: Georgia, monospace;
 }
 
 body {
     background:rgb(54, 50, 77);
 }
 
-h1, h2, h3,label {
+h1, h2, h3 {
     color:beige;
+    font-weight: normal;
 }
 
 a {
@@ -39,6 +41,7 @@ header, footer {
     clear: both;
     width: 940px;
     margin: 0 auto;
+    color: beige;
 }
 
 footer {
@@ -50,13 +53,16 @@ footer {
 label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: normal;
+    color: rgb(54, 50, 77);
 }
 
 input {
     display: block;
     width: 100%;
     margin-bottom: 10px;
+    background-color: beige;
+    border-color: rgb(54, 50, 77);
 }
 
 fieldset {
@@ -64,8 +70,10 @@ fieldset {
 }
 
 form {
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
+    background-color: beige;
+    border:beige;
 }
 
 h1 {
@@ -88,4 +96,11 @@ h3 {
     color: orange;
     font-size: italic;
     margin: 10px 0;
+}
+
+button {
+    background-color: rgb(54, 50, 77);
+    border: none;
+    color: beige;
+    padding: 5px;
 }
