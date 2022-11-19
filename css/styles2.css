@@ -41,22 +41,34 @@ nav a {
 }
 
 #wrapper {
-    max-width: 100%;
+    max-width: 940px;
     margin: 20px auto;
 }
 
 main {
+    max-width: 61.7%;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 3px solid black;
     padding: 10px;
+    float: left;
 }
 
 aside {
+    max-width: 36.1%;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 3px solid black;
-    padding: 10px;
+    padding: 20px;
+    float: right;
+    background-color: black;
+}
+
+aside h2, ul {
+    color: white;
+}
+
+aside a {
+    color: cyan;
 }
 
 img {
@@ -87,4 +99,17 @@ h1, h2 {
 
 a {
     font-family: monospace;
+}
+
+footer {
+    height: 20px;
+    line-height: 20px;
+    border-top: black;
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
 }
